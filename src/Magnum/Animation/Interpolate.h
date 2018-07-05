@@ -117,6 +117,10 @@ calculated interpolation factor, returning the interpolated value.
 The @p hint parameter hints where to start the linear search and is updated
 with keyframe index matching @p frame. If @p frame is earlier than @p hint, the
 search is restarted from the beginning.
+
+Used internally from @ref Track::at() / @ref TrackView::at(), see
+@ref TrackView documentation for more information.
+
 @see @ref interpolateStrict(), @ref Math::select(), @ref Math::lerp(),
     @ref Math::slerp(), @ref Math::sclerp()
 @experimental
@@ -136,6 +140,10 @@ restarted from the beginning.
 This is a stricter but more performant version of @ref interpolate() with
 implicit @ref Extrapolation::Extrapolated behavior. Expects that there are
 always at least two keyframes.
+
+Used internally from @ref Track::atStrict() / @ref TrackView::atStrict(), see
+@ref TrackView documentation for more information.
+
 @see @ref Math::select(), @ref Math::lerp(), @ref Math::slerp(),
     @ref Math::sclerp()
 @experimental

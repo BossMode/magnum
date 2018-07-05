@@ -24,6 +24,8 @@
 #
 
 corrade_add_test(AnimationInterpolateTest InterpolateTest.cpp LIBRARIES Magnum)
+corrade_add_test(AnimationTrackTest TrackTest.cpp LIBRARIES Magnum)
+corrade_add_test(AnimationTrackViewTest TrackViewTest.cpp LIBRARIES Magnum)
 
 set_property(TARGET
     AnimationInterpolateTest
